@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cube Colony Organoids</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="topbar">
+      <div>
+        <h1>Cube Colony</h1>
+        <p>Organoid robots in snap-together apartments</p>
+      </div>
+      <div class="ticker">
+        <span>tick</span>
+        <strong id="tick">0</strong>
+      </div>
+    </section>
+
+    <section class="layout">
+      <div class="grid-panel">
+        <div id="grid" class="grid" aria-label="cube colony grid"></div>
+      </div>
+
+      <aside class="panel">
+        <div id="portrait" class="portrait">
+          <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div id="mouth" class="mouth"></div>
+          </div>
+          <div>
+            <h2 id="botName">Select a brain</h2>
+            <p id="botEvent">Click a cube robot.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button data-command="feed">Feed</button>
+          <button data-command="pet">Comfort</button>
+          <button data-command="caffeine">Caffeine</button>
+          <button data-command="poppy">Poppy tea</button>
+          <button data-command="teach">Teach meme</button>
+          <button id="addBot">Add brain</button>
+          <button id="toggleCube">Toggle cube</button>
+        </div>
+
+        <div class="readouts">
+          <div class="stat"><span>Goal</span><strong id="goal">-</strong></div>
+          <div class="stat"><span>Emotion</span><strong id="emotion">-</strong></div>
+          <div class="stat"><span>Style</span><strong id="personality">-</strong></div>
+          <label>Energy <meter id="energy" min="0" max="1"></meter></label>
+          <label>Nutrition <meter id="nutrition" min="0" max="1"></meter></label>
+          <label>Integrity <meter id="integrity" min="0" max="1"></meter></label>
+          <label>Social <meter id="social" min="0" max="1"></meter></label>
+          <label>Craving <meter id="craving" min="0" max="1"></meter></label>
+          <label>Trauma <meter id="trauma" min="0" max="1"></meter></label>
+          <label>Dopamine <meter id="dopamine" min="0" max="1"></meter></label>
+          <label>Cortisol <meter id="cortisol" min="0" max="1"></meter></label>
+        </div>
+
+        <section class="news-panel">
+          <h3>Colony news</h3>
+          <div id="news" class="news" aria-live="polite"></div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

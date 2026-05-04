@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
-      "CheapNeuroSim/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "compile": {
-          "bin/placeholder/CheapNeuroSim.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CheapNeuroSim.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "CheapNeuroSim/1.0.0": {
-      "type": "project",
-      "path": "../../src/CheapNeuroSim/CheapNeuroSim.csproj",
-      "msbuildProject": "../../src/CheapNeuroSim/CheapNeuroSim.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "CheapNeuroSim >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\devfo\\.nuget\\packages\\": {}
@@ -50,11 +31,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\devfo\\Documents\\Codex\\2026-05-03\\you-are-an-expert-in-creating\\src\\CheapNeuroSim\\CheapNeuroSim.csproj": {
-              "projectPath": "C:\\Users\\devfo\\Documents\\Codex\\2026-05-03\\you-are-an-expert-in-creating\\src\\CheapNeuroSim\\CheapNeuroSim.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

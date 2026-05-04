@@ -4,8 +4,6 @@
     <LangVersion>9</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CheapNeuroSim\CheapNeuroSim.csproj" />
-  </ItemGroup>
 </Project>

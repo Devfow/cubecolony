@@ -1,0 +1,10 @@
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\CubeColonyWeb.exe
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\wwwroot\app.js
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\wwwroot\index.html
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\wwwroot\style.css
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\CheapNeuroSim\obj\CheapNeuroSim.csproj.nuget.dgspec.json
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\CheapNeuroSim\obj\project.assets.json
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\CubeColonyWeb.dll
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\CubeColonyWeb.deps.json
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\CubeColonyWeb.runtimeconfig.json
+C:\Users\devfo\Documents\Codex\2026-05-03\you-are-an-expert-in-creating\examples\CubeColonyWeb\bin\Release\net5.0\publish\CubeColonyWeb.pdb

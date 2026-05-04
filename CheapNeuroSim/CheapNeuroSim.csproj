@@ -6,5 +6,6 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <AssemblyName>CheapNeuroSim</AssemblyName>
     <RootNamespace>CheapNeuroSim</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 </Project>
