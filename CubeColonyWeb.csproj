@@ -6,6 +6,6 @@
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CheapNeuroSim\CheapNeuroSim.csproj" />
+    <ProjectReference Include="..\CheapNeuroSim\CheapNeuroSim.csproj" />
   </ItemGroup>
 </Project>
