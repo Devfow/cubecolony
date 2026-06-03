@@ -1,0 +1,136 @@
+CheapNeuroSim is a comprehensive C# neurochemistry simulation namespace that models artificial brains with realistic neural dynamics, emotions, memory, social behavior, and genetic inheritance.
+
+Core Architecture
+Neural System
+Brain.cs - The main neural simulation engine (sealed class)
+
+Manages neuron activations, synaptic propagation, and learning
+Uses 3 activation states: _activation (current), _nextActivation (buffer), _lastActivation (previous)
+Implements Hebbian learning with plasticity scaling
+Tracks ~400 lines of core simulation logic
+BrainGenome.cs - Genetic blueprint for brains
+
+Contains immutable brain architecture (neurons & synapses)
+Supports genetic mutations with customizable settings
+Pre-wires innate survival circuits (eat, flee, rest, explore, signal)
+Generates seeded random genomes
+NeuronGene.cs & SynapseGene.cs - Individual neural components
+
+Neurons: bias, excitability, leak, action target/weight
+Synapses: source/destination, weight, plasticity
+Input/Output Channels (BrainChannels.cs)
+Standardized sensor/action channels:
+
+Sensors: Hunger, Threat, Pain, Social, Novelty, Energy
+Actions: Eat, Flee, Rest, Explore, Bond, Signal, and others
+Neurochemical System
+NeurochemicalState.cs - 6 key neurotransmitters that modulate behavior:
+
+Dopamine (0-1) - Reward, motivation, novelty drive
+Serotonin (0-1) - Mood stability, calm
+Norepinephrine (0-1) - Alertness, arousal
+Cortisol (0-1) - Stress response
+Oxytocin (0-1) - Bonding, affiliation
+Acetylcholine (0-1) - Learning, attention
+Dynamics respond to inputs (hunger, threat, pain, social, novelty, energy), rewards, and brain temperament.
+
+Emotional System
+EmotionKind.cs - 9 emotion types:
+
+Calm, Afraid, Curious, Lonely, Craving, Affectionate, Angry, Exhausted, Hurt
+EmotionState.cs - Tracks individual emotional values (0-1) plus a "Primary" dominant emotion determined by neurochemical/need states.
+
+Personality & Temperament
+PersonalityStyle.cs - 7 personality archetypes:
+
+Balanced, Timid, Impulsive, Gregarious, Obsessive, Suspicious, Dutiful
+TemperamentProfile.cs - Heritable traits:
+
+Novelty Seeking, Harm Avoidance, Reward Dependence, Sociability, Learning Rate, Impulse Control
+PersonalityExpression.cs - Derives current personality from state (temperament + addiction + trauma + needs).
+
+Memory Systems
+EpisodicMemoryState.cs - Records memories with:
+
+Emotional valence (reward/threat)
+Social context (group associations)
+Novelty/salience tracking
+Consolidation into culture beliefs during offline sleep
+MemoryTrace.cs - Individual memory entries MemoryDebugSnapshot.cs - Debug snapshots of memory state
+
+Needs & Motivation
+NeedsState.cs - 5 core needs (0-1):
+
+Energy, Nutrition, Integrity (health), Healing, Social
+NeedsProfile.cs - Genetic predisposition for need sensitivity
+
+Addiction System
+AddictionState.cs - Tracks:
+
+Craving intensity
+Withdrawal symptoms
+Tolerance buildup
+Sensitization to triggers
+AddictiveStimulus.cs - Describes dopamine/reward stimuli that can cause addiction.
+
+Attention & Goals
+AttentionState.cs - Filters sensory input with:
+
+Threat/Pain levels
+Novelty salience
+Dominant focus for sensor gain modulation
+GoalState.cs - Tracks:
+
+Active goals and their intensity
+Goal satisfaction/pursuit state
+GoalKind.cs - Goal types (e.g., survive, reproduce, bond, explore).
+
+Social & Cultural Behavior
+SocialBiasState.cs - In-group/out-group bias:
+
+Learns group affiliations & threat associations
+Evaluates attitude (affiliation vs. threat) toward groups
+Modulates oxytocin/cortisol based on group membership
+SocialIdentity.cs - Individual/group identity markers SocialSignal.cs - Emotional contagion (affiliation, stress, valence) CultureState.cs - Cultural beliefs and memes shared within groups CulturalMeme.cs - Beliefs that spread with mutation & virulence ReputationState.cs - Tracks reputation with specific individuals
+
+Development & Trauma
+DevelopmentState.cs - Life stages (Newborn → Adult) affecting:
+
+Culture uptake multiplier
+Impulse control development
+Plasticity changes
+DevelopmentStage.cs - Enum of development phases
+
+TraumaState.cs - PTSD-like responses:
+
+Hypervigilance
+Trigger load
+Recovery mechanisms
+Utilities & Debug
+BrainType.cs - Architecture template defining:
+
+Neuron/synapse/sensor/action counts
+Chemical profile
+Baseline plasticity
+BrainInput/BrainOutput.cs - I/O vectors
+
+BrainDebugSnapshot.cs - Captures complete brain state for debugging BrainRuntimeState.cs - Saves/restores runtime simulation state
+
+SynapseDebugStats.cs - Tracks synapse weight statistics (min/max/average)
+
+MathUtil.cs - Utility functions (clamping, approach, tanh, etc.)
+
+StableRandom.cs - Seeded random generator for reproducible mutations
+
+MutationSettings.cs - Controls mutation rates & intensity
+
+Integration
+The system interconnects through the Brain.Tick() method:
+
+Input injection → sensor gains modulated by attention
+Synapse propagation → weighted neuron activations
+Neurochemical update → responds to inputs/rewards
+Emotion evaluation → driven by chemicals + needs + trauma
+Action projection → neuron outputs scaled by dopamine/serotonin
+Learning → Hebbian + reward + stress modulation
+Memory recording → important events stored episodically
